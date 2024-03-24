@@ -1,0 +1,429 @@
+/* Tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Cursor Style */
+.animation {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, rgb(72, 124, 255), rgb(158, 255, 239));
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(60px);
+    transform: translate(-50%, -50%);
+}
+
+.cursor {
+    border-left: 4px solid white;
+    margin-left: 5px;
+    height: 100%;
+}
+
+.add-text {
+    text-shadow: 1px 1px 10px white;
+}
+
+
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('20230114_175539.jpg') center no-repeat; */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('laptop2.jpg') center no-repeat; */
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+.top-nav {
+    background-color: rgba(99, 99, 99, 0.5);
+    transition: 1s ease;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 6px 0 #a8b5ce;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: .5s ease;
+}
+
+nav ul li a:hover {
+    color: dodgerblue;
+}
+
+.active {
+    color: dodgerblue;
+}
+
+.main-name {
+    height: 75vh;
+}
+
+.scroll-top {
+    right: 1rem;
+    bottom: -5rem;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 5px 10px;
+    transition: .3s ease;
+    opacity: 0;
+    background-color: white;
+}
+
+.scroll-top::after {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    transition: .3s ease;
+    z-index: -1;
+}
+
+.scroll-top:hover {
+    color: white;
+}
+
+.scroll-top:hover::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.add-button {
+    bottom: 1rem;
+    opacity: 1;
+}
+
+.progress {
+    height: 10px !important;
+}
+
+.white-border {
+    border: 3px dashed white;
+}
+
+.myForm {
+    border-radius: 10px;
+    z-index: 5;
+    width: 40%;
+    height: auto;
+    transition: .5s ease-in-out;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* top: 50%; */
+    top: -100%;
+    opacity: 0;
+}
+
+.openForm {
+    opacity: 1;
+    top: 50%;
+}
+
+.cancel {
+    padding: 10px 13px;
+    border-radius: 50%;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.menu {
+    display: none;
+    font-size: 25px;
+    border: 1px solid white;
+    padding: 0px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-text {
+    text-shadow: 1px 1px 10px white;
+}
+
+.cursor {
+    border-left: 4px solid white;
+    margin-left: 5px;
+    height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .logIn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    .navbar {
+        position: static !important;
+    }
+
+    .mainNav ul {
+        padding: 0;
+        display: block !important;
+        background-color: black;
+        width: 50%;
+        height: 100vh;
+        top: 0;
+        right: -50%;
+        position: absolute;
+        text-align: center;
+        /* border: 1px solid white; */
+        transition: .5s ease;
+    }
+
+    #close-navBar {
+        display: block !important;
+    }
+
+    .mainNav ul li {
+        padding: 25px;
+        border-bottom: 1px solid white;
+    }
+
+    #main-top .mob-email,
+    #main-top .name {
+        display: block !important;
+    }
+
+    #main-top .name h5 {
+        font-size: 25px;
+    }
+
+    #main-top .mob-email b {
+        display: block;
+        font-size: 15px;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #main-top .name h5 {
+        font-size: 18px;
+    }
+}
+
+.show-navbar {
+    right: 0 !important;
+}
+
+/* For Social media Logo */
+.common {
+    padding: 7px 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.common::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.common:hover::after {
+    top: 0;
+}
+
+.common>a>i {
+    font-size: 25px;
+    transition: all .5s ease;
+}
+
+.common:hover>a>i {
+    transform: rotateY(360deg);
+    color: white;
+}
+
+.facebook::after {
+    background-color: blue;
+}
+
+.instagram::after {
+    background-image: linear-gradient(135deg, purple, rgb(245, 73, 102), red 20%, yellow);
+}
+
+.skype::after {
+    background-color: dodgerblue;
+}
+
+.whatsapp::after {
+    background-color: green;
+}
+
+.linked-in::after {
+    background-color: rgb(0, 0, 173);
+}
+
+.border-left {
+    border-left: 3px solid blue;
+}
+
+.parent {
+    position: relative;
+}
+
+.add-dot:before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    background-color: blue;
+    position: absolute;
+    left: -28px;
+    top: 10px;
+}
+
+.contact-by-user {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-by {
+    width: 50%;
+    padding: 10px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid dodgerblue;
+    color: white;
+    font-weight: bold;
+    transition: .5s ease;
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+.contact-by:hover {
+    background-color: transparent;
+    color: black;
+}
+
+::placeholder {
+    color: white !important;
+    opacity: .5 !important;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+h1 {
+    transition: .5s ease;
+}
+
+h1:hover {
+    transform: translateY(-10px);
+    display: inline-block;
+}
+
+.images,
+.share,
+.share-x,
+.share-y,
+.share-btn {
+    transition: .5s ease;
+    box-shadow: 0px 0px 7px 0px white;
+}
+
+.share:hover {
+    transform: translate(-10px, -10px);
+}
+
+.share-x:hover {
+    transform: translate(-15px, 0px);
+}
+
+.share-y:hover {
+    transform: translate(-10px, 10px);
+}
+
+.share-btn:hover {
+    transform: translate(10px, 0px);
+}
+
+.images {
+    transform: scale(1.1);
+}
+
+.images:hover {
+    transform: scale(1);
+}
+
+.m-cursor {
+    position: fixed;
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 200px;
+    left: 200px;
+}
+
+.main-cursor {
+    width: 25px;
+    height: 25px;
+}
+
+.parent-cursor {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+}
+
+.children-cursor {
+    width: 8px;
+    height: 8px;
+    opacity: .5;
+    background-color: white;
+}
