@@ -7,12 +7,14 @@ const Contact = () => {
             <section id="contact" className="same-class-for-scroll bg-gray-900 pt-[50px]">
                 <div className="w-[90vw] mx-auto sm:px-4 py-5">
                     <h1 style={{ borderBottom: "10px groove white" }}
-                        className="text-3xl ms-4 pt-3 pb-2 m-0 inline-block text-white mb-5 wow bounceInDown"
+                        // className="text-3xl ms-4 pt-3 pb-2 m-0 inline-block text-white mb-5 wow bounceInDown"
+                        className="text-3xl ms-4 pt-3 pb-2 m-0 inline-block text-white mb-5"
                     >
                         Contact
                     </h1>
                     <div className="flex flex-wrap ">
-                        <div className="lg:w-2/5 pr-4 pl-4 text-white wow bounceInLeft">
+                        {/* <div className="lg:w-2/5 pr-4 pl-4 text-white wow bounceInLeft"> */}
+                        <div className="lg:w-2/5 pr-4 pl-4 text-white">
                             <div className="share flex items-center rounded border border-blue-600 p-6 mb-3">
                                 <a
                                     href="https://www.google.com/maps/place/New+Ranchodraynagar+Society/@23.1021652,72.548237,19.08z/data=!4m14!1m7!3m6!1s0x395e831824190719:0x73f901e0e996377c!2sVandemataram+Icon!8m2!3d23.0975653!4d72.5479279!16s%2Fg%2F1tgvc024!3m5!1s0x395e831ef3000001:0x49d12bbb154a1dd7!8m2!3d23.1025439!4d72.5484008!16s%2Fg%2F11f3vp737b?entry=ttu"
@@ -47,7 +49,8 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full lg:w-3/5 pr-4 pl-4 text-white wow bounceInRight">
+                        {/* <div className="w-full lg:w-3/5 pr-4 pl-4 text-white wow bounceInRight"> */}
+                        <div className="w-full lg:w-3/5 pr-4 pl-4 text-white ">
                             <form action="">
                                 <div className="flex flex-wrap pb-3">
                                     <div className="w-full sm:w-1/2 mb-4 sm:mb-0 sm:pr-4">
@@ -91,7 +94,8 @@ const Contact = () => {
                                 <div className="text-center py-3 ">
                                     <button
                                         style={{ transition: ".5s ease" }}
-                                        className="wow bounceInUp inline-block align-middle text-center select-none border font-normal whitespace-no-wrap  py-1 px-3 leading-normal no-underline text-blue-600 border-blue-600 hover:text-white bg-transparent hover:bg-blue-600 rounded-full share-btn !shadow-none"
+                                        // className="wow bounceInUp inline-block align-middle text-center select-none border font-normal whitespace-no-wrap  py-1 px-3 leading-normal no-underline text-blue-600 border-blue-600 hover:text-white bg-transparent hover:bg-blue-600 rounded-full share-btn !shadow-none"
+                                        className=" inline-block align-middle text-center select-none border font-normal whitespace-no-wrap  py-1 px-3 leading-normal no-underline text-blue-600 border-blue-600 hover:text-white bg-transparent hover:bg-blue-600 rounded-full share-btn !shadow-none"
                                     >
                                         Send Message
                                     </button>

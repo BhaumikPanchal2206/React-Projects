@@ -33,11 +33,11 @@ function Skills() {
                     {Object.keys(data).map((name, i) => (
                         <div key={i} className="space-y-2">
                             <h3 className="text-xl font-bold tracking-tight">{name}</h3>
-                            <div data-wow-duration="1s" className={`grid gap-4  ${i % 2 === 0 ? "wow bounceInLeft" : "wow bounceInRight"}`}>
-                            {/* <div className={`grid gap-4 `}> */}
+                            {/* <div data-wow-duration="1s" className={`grid gap-4  ${i % 2 === 0 ? "wow bounceInLeft" : "wow bounceInRight"}`}> */}
+                            <div className={`grid gap-4 `}>
                                 {data[name].map((ele, index) => (
-                                    // <div data-wow-delay={`0.${index}s`} data-wow-duration="1s" key={index} className={`bg-gray-800 p-4 rounded-lg ${i % 2 === 0 ? "wow bounceInLeft" : "wow bounceInRight"}`}>
-                                        <div key={index} className={`bg-gray-800 p-4 rounded-lg `}>
+                                    <div key={index} className={`bg-gray-800 p-4 rounded-lg `}>
+                                        {/* <div data-wow-delay={`0.${index}s`} data-wow-duration="1s" key={index} className={`bg-gray-800 p-4 rounded-lg ${i % 2 === 0 ? "wow bounceInLeft" : "wow bounceInRight"}`}> */}
                                         <div className="flex items-center gap-4">
                                             {ele.logo}
                                             <h4 className="font-semibold">{ele.name}</h4>

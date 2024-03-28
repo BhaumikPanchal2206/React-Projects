@@ -6,7 +6,8 @@ const Footer = () => {
             <footer className="bg-black text-white text-md-center">
                 <div className="w-[90vw] mx-auto py-4">
                     <div className="block md:flex items-center">
-                        <div className="w-full md:w-1/2 mb-3 text-left md:text-center wow bounceInLeft">
+                        {/* <div className="w-full md:w-1/2 mb-3 text-left md:text-center wow bounceInLeft"> */}
+                        <div className="w-full md:w-1/2 mb-3 text-left md:text-center">
                             <h4 className='text-xl'>
                                 Mobile No:- <b>9429613731</b>
                             </h4>
@@ -14,7 +15,8 @@ const Footer = () => {
                                 Email:- <b>bhaumikpanchal2206@gmail.com</b>
                             </h4>
                         </div>
-                        <div className="w-full md:w-1/2 text-left md:text-center wow bounceInRight">
+                        {/* <div className="w-full md:w-1/2 text-left md:text-center wow bounceInRight"> */}
+                        <div className="w-full md:w-1/2 text-left md:text-center">
                             <h3 className='text-xl mb-3'>Social Media</h3>
                             <div className="flex justify-start md:justify-center gap-3">
                                 <div className="overflow-hidden rounded-circle relative z-3 text-center common instagram border border-white">

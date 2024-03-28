@@ -17,8 +17,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<HeroSection />} />
         <Route path="/" element={<MainLayout />}>
-        <Route index element={<HeroSection />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />

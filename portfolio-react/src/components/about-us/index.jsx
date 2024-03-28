@@ -1,46 +1,94 @@
-import React from 'react'
-
 function AboutUs() {
     return (
-        <div className="w-full py-12 lg:py-24 bg-black text-white wow fadeIn">
-            <div className="container grid md:gap-6 xl:grid-cols-3 xl:gap-10">
-                <div className="flex items-center space-x-4 xl:col-span-2">
-                    <div className="space-y-4">
-                        <div className="space-y-2">
-                            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Jane Smith</h1>
-                            <p className="text-gray-500 dark:text-gray-400">Frontend Engineer</p>
-                        </div>
-                        <div className="space-y-2 text-xl md:text-base xl:text-xl">
-                            <p>
-                                Passionate about creating beautiful and accessible web experiences. I enjoy working with React and
-                                Tailwind CSS to bring designs to life.
+        <div className="bg-gradient-to-b from-gray-800 to-gray-900">
+            <div className="w-[90vw] mx-auto py-24 print:hidden  ">
+                <div className="container px-4 grid auto-cols-fr min-h-[9in] gap-8">
+                    <div className="space-y-2">
+                        <div className="space-y-1">
+                            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">
+                                Bhaumik Panchal
+                            </h1>
+                            <p className="text-base font-medium text-gray-100 dark:text-gray-400">
+                                React Developer
                             </p>
                         </div>
+                        <div className="flex flex-col gap-1">
+                            <p className="text-sm font-medium text-gray-100 dark:text-gray-400">
+                                bhaumikpanchal2206@gmail.com
+                            </p>
+                            <p className="text-sm font-medium text-gray-100 dark:text-gray-400">
+                                9429613731
+                            </p>
+                            <a href="https://github.com/BhaumikPanchal2206" target="_blank" className="text-sm font-medium text-gray-100 dark:text-gray-400">
+                                https://github.com/BhaumikPanchal2206
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div className="grid gap-4 md:gap-2 md:grid-cols-2 xl:col-start-2 xl:col-span-2">
-                    <div className="space-y-2">
-                        <h2 className="text-lg font-semibold">Skills</h2>
-                        <ul className="grid gap-2 md:gap-1 lg:grid-cols-2">
-                            <li>HTML/CSS</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>React.js</li>
-                            <li>Responsive Design</li>
-                            <li>Accessibility</li>
-                        </ul>
+                    <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:items-center md:gap-4">
+                        <div className="flex flex-col gap-1">
+                            <h2 className="text-lg font-semibold text-white">Summary</h2>
+                            <p className="text-sm leading-loose text-gray-100 md:text-base/relaxed dark:text-gray-400">
+                                Creative and detail-oriented frontend engineer with a passion for crafting beautiful and user-friendly
+                                interfaces. Excels in collaborative environments and is dedicated to writing clean, maintainable code.
+                                Experienced in modern web technologies including React, Next.js, and Tailwind CSS.
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h2 className="text-lg font-semibold text-white">Skills</h2>
+                            <div className="flex flex-wrap gap-2">
+                                <div className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm dark:border-gray-800 dark:bg-gray-950 text-gray-800">
+                                    HTML / CSS
+                                </div>
+                                <div className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm dark:border-gray-800 dark:bg-gray-950 text-gray-800">
+                                    Tailwind CSS / Bootstrap
+                                </div>
+                                <div className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm dark:border-gray-800 dark:bg-gray-950 text-gray-800">
+                                    JavaScript
+                                </div>
+                                <div className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm dark:border-gray-800 dark:bg-gray-950 text-gray-800">
+                                    React
+                                </div>
+                                <div className="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm shadow-sm dark:border-gray-800 dark:bg-gray-950 text-gray-800">
+                                    Next.js
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="space-y-2">
-                        <h2 className="text-lg font-semibold">Education</h2>
-                        <ul className="list-disc list-inside">
-                            <li>B.S. in Computer Science, University of Example, 2010 - 2014</li>
-                        </ul>
+                    <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:items-center md:gap-4">
+                        <div className="flex flex-col gap-1">
+                            <h2 className="text-lg font-semibold text-white">Education</h2>
+                            <div className="space-y-2">
+                                <div className="flex items-center gap-2">
+                                    <div className="text-sm font-medium text-gray-100">BSc in Computer Science</div>
+                                    <div className="text-sm text-gray-100 dark:text-gray-400">University of Example</div>
+                                </div>
+                                <div className="text-sm text-gray-100 dark:text-gray-400">2012 - 2016</div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h2 className="text-lg font-semibold text-white">Professional Experience</h2>
+                            <div className="space-y-2">
+                                <div className="flex items-center gap-2">
+                                    <div className="text-sm font-medium text-gray-100">Frontend Engineer at Example Corp</div>
+                                </div>
+                                <div className="text-sm text-gray-100 dark:text-gray-400">2016 - Present</div>
+                                <p className="text-sm leading-loose text-gray-100 md:text-base/relaxed dark:text-gray-400">
+                                    Leading the frontend development of innovative web applications. Collaborating with cross-functional
+                                    teams to deliver high-quality software. Implementing responsive and accessible user interfaces using
+                                    modern web technologies.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="space-y-2">
-                        <h2 className="text-lg font-semibold">Experience</h2>
-                        <ul className="list-disc list-inside">
-                            <li>Frontend Engineer, Example Inc, 2018 - Present</li>
-                            <li>Junior Developer, Test Corp, 2015 - 2018</li>
-                        </ul>
+                    <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:items-center md:gap-4">
+                        <div className="flex flex-col gap-1">
+                            <h2 className="text-lg font-semibold text-white">Hobbies</h2>
+                            <div className="space-y-2">
+                                <div className="text-sm font-medium text-gray-100">Drawing</div>
+                                <div className="text-sm font-medium text-gray-100">Listening Song</div>
+                                <div className="text-sm font-medium text-gray-100">Cricket</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
