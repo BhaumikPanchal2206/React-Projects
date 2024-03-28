@@ -14,8 +14,8 @@ export default function Header() {
                         <div className="w-20 block">
                             <Link className="w-20 h-20" href="#">
                                 <img
-                                    alt="Acme Inc"
-                                    className="w-full h-full"
+                                    alt="Teck Tonic"
+                                    className="w-full h-full hover:scale-110 duration-200"
                                     src="assets/images/logo.png"
                                 />
                             </Link>
