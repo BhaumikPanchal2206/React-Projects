@@ -189,13 +189,13 @@ const MainLayout = () => {
 
                 <div className='w-full md:w-3/12'>
                     <div className="w-full pt-24 pb-12 sticky -z-10 top-0">
-                        <AdSense.Google
+                        {/* <AdSense.Google
                             client='pub-8612459690712276'
                             slot='1234567890'
                             style={{ width: 300, height: 250, float: 'left' }}
                             format=''
-                        />
-                        {/* <div className="bg-white rounded-lg overflow-hidden border border-gray-300 shadow-md">
+                        /> */}
+                        <div className="bg-white rounded-lg overflow-hidden border border-gray-300 shadow-md">
                             <img
                                 src="https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png"
                                 alt="image"
@@ -220,7 +220,7 @@ const MainLayout = () => {
                                     View Ad
                                 </a>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
