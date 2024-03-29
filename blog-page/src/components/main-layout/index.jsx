@@ -14,13 +14,11 @@ const MainLayout = () => {
     return (
         <>
             <Header />
-            <div className='pt-[80px]'></div>
 
             {/* <div> */}
-            <div className='w-[90vw] pt-[85px] mx-auto block md:flex gap-5'>
+            <div className='w-[90vw] mx-auto block md:flex gap-5'>
                 <div className='w-full md:w-9/12'>
                     <div className="bg-gray-50/50 py-8 md:py-12 lg:py-16 xl:py-20">
-                        {/* <div className="container grid md:gap-4 lg:grid-cols-3 xl:gap-8"> */}
                         <div className="text-center space-y-4 lg:col-span-2 xl:col-span-1">
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">The Gadget Enthusiast</h2>
                             <p className="text-base md:text-xl/relaxed text-gray-500 dark:text-gray-400">
@@ -28,28 +26,15 @@ const MainLayout = () => {
                                 smartphones, wearables, or smart home tech, we've got you covered.
                             </p>
                             <div className="text-center">
-                                <button className="bg-white text-black rounded-full border border-blue-600 px-3 py-1 me-2 hover:bg-blue-600 hover:text-white duration-300" href="#">Subscribe</button>
-                                <button className="bg-blue-600 text-white rounded-full px-3 py-1 me-2 hover:bg-white hover:text-black hover:border hover:border-blue-600 duration-300" href="#">Start Reading</button>
+                                <a className="bg-white text-black rounded-full border border-blue-600 px-3 py-1 me-2 hover:bg-blue-600 hover:text-white duration-300" href="#">Subscribe</a>
+                                <a className="bg-blue-600 text-white rounded-full px-3 py-1 me-2 hover:bg-white hover:text-black hover:border hover:border-blue-600 duration-300" href="#blogs">Start Reading</a>
                             </div>
                         </div>
-                        {/* <div className="grid gap-4 sm:gap-6 lg:order-first lg:col-span-1">
-                                <div className="mx-auto flex items-center justify-center p-4 sm:p-8">
-                                    <img
-                                        className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-                                        height="150"
-                                        width="300"
-                                        src="assets/images/logo.png"
-                                        alt=""
-                                    />
-                                </div>
-                            </div> */}
-                        {/* </div> */}
                     </div>
 
-                    <DropDownMenu />
 
                     <div className="py-8 md:py-10 lg:py-14 xl:py-16">
-                        <div className="container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+                        <div className="container grid items-center mb-4 gap-4 px-4 text-center md:px-6 lg:gap-10">
                             <div className="space-y-2">
                                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">Featured Articles</h2>
                                 <p className="mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -57,6 +42,8 @@ const MainLayout = () => {
                                 </p>
                             </div>
                         </div>
+
+                        <DropDownMenu />
 
                         <Blogs />
 
@@ -135,7 +122,7 @@ const MainLayout = () => {
                     </div>
                 </div>
             </div>
-            
+
             <Footer />
         </>
     )

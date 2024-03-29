@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 const category = [
     {
         name: "Mobile",
-        items: ["samsung", "iphone", "Nokia", "Vivo"]
+        items: ["Samsung", "iPhone",]
     },
     {
         name: "Headphone",
-        items: ["Boat", "U & I", "Sony", "Beats"]
+        items: ["Boat", "U & I"]
     },
 ]
 
