@@ -2,9 +2,27 @@ import React, { useState } from 'react'
 import Header from '../header'
 import Footer from '../footer'
 import DropDownMenu from '../dropdown-menu'
+import AdSense from 'react-adsense';
 
 const data = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo fugiat facilis illum quis accusantium quaerat, repellat dolore eius nesciunt numquam dignissimos asperiores possimus. Aperiam maiores repellat dolores natus saepe nam illo, architecto assumenda ipsa laborum debitis maxime rerum voluptatibus, iusto doloremque inventore sequi distinctio. Qui, doloremque aliquid! Temporibus necessitatibus pariatur alias atque. Blanditiis minus, quasi aspernatur ea nam obcaecati facilis facere ipsa nulla eaque explicabo? Pariatur maxime architecto vitae qui accusamus impedit necessitatibus nulla, modi recusandae porro consectetur at quo enim doloribus debitis vero illum repellat, dolorum unde fugit, vel veniam! Enim quis sint ipsum ea dignissimos ullam! Atque porro, consequuntur asperiores aliquid rerum neque mollitia! Sapiente voluptatibus itaque, ea hic aspernatur excepturi quaerat officia eligendi? Maiores doloremque eos quaerat saepe enim asperiores ea, distinctio iusto ipsam impedit. Sint, placeat expedita hic illum magnam nobis unde repudiandae voluptate tenetur facilis nihil, voluptatem quibusdam ad minus consectetur earum ipsam provident quis reprehenderit quia officiis pariatur. Iure quis illum cumque odio numquam tempore adipisci harum, accusamus, laboriosam magnam ut aperiam non ducimus aut omnis fugit eaque cupiditate deserunt voluptatem asperiores nostrum expedita pariatur dignissimos. Cum dolor, placeat nobis labore deleniti eos sapiente optio? Neque nihil molestias vitae ea non nisi quam aliquid et eveniet nesciunt vero cum soluta, debitis quasi omnis laborum a eius exercitationem accusantium modi fugit libero voluptatibus, ut expedita? Eaque, accusantium praesentium alias ab reiciendis suscipit quos nulla omnis neque in, animi aut eos atque esse eius iusto optio quaerat doloribus nisi voluptas voluptates, iure facere veritatis! Officia, explicabo!"
 
+const blogData = [
+    {
+        category: "Mobile",
+        subcategories: [
+            { name: "Samsung", posts: [1, 2] },
+            { name: "iPhone", posts: [1, 2, 3, 4] }
+        ]
+    },
+    {
+        category: "Headphone",
+        subcategories: [
+            { name: "Boat", posts: [1] },
+            { name: "U & I", posts: [1, 2, 3, 4, 5] }
+        ]
+    },
+    // Add more categories and subcategories as needed
+];
 
 const MainLayout = () => {
     const [showMore, setShowMore] = useState(false)
@@ -57,8 +75,48 @@ const MainLayout = () => {
                         </div>
                         <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-white">
                             <div className="container">
-                                {/* <div className="flex flex-wrap -mx-4"> */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                                {blogData.map((gadget, index1) => (
+                                    <div key={index1}>
+                                        <h2 className="text-4xl border-b-4 border-black font-semibold pb-2">{gadget.category}</h2>
+                                        {gadget.subcategories.map((subcategory, index2) => (
+                                            <div key={index2}>
+                                                <h2 className="text-2xl">{subcategory.name}</h2>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                                                    {subcategory.posts.map((post, index3) => (
+                                                        <div key={index3} className="bg-white rounded-lg overflow-hidden mb-10 hover:shadow-2xl">
+                                                            <img
+                                                                src="assets/images/placeholder.jpeg"
+                                                                alt="image"
+                                                                className="w-full"
+                                                            />
+                                                            <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                                                                <h3>
+                                                                    <a
+                                                                        href="javascript:void(0)"
+                                                                        className=" font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
+                                                                    >
+                                                                        Creative Card Component designs graphic elements
+                                                                    </a>
+                                                                </h3>
+                                                                <p className="text-base text-body-color leading-relaxed mb-7">
+                                                                    {index3 % 2 === 0 ?
+                                                                        "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit Lorem consectetur adipiscing elit" : "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit Lorem consectetur adipiscing elit Lorem ipsum dolor sit amet pretium consectetur adipiscing elit Lorem consectetur adipiscing elit"}
+                                                                </p>
+                                                                <a
+                                                                    href="javascript:void(0)"
+                                                                    className=" inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-blue-600 hover:bg-blue-600 hover:text-white duration-500 transition "
+                                                                >
+                                                                    View Details
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                                {/* <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                                     {[1, 2, 3, 4, 5].map((_, index) => (
                                         <div key={index} className="bg-white rounded-lg overflow-hidden mb-10 hover:shadow-2xl">
                                             <img
@@ -88,7 +146,7 @@ const MainLayout = () => {
                                             </div>
                                         </div>
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
                         </section>
                     </div>
@@ -123,30 +181,6 @@ const MainLayout = () => {
                             </form>
                         </div>
                     </div>
-                    {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                        <div className="bg-slate-500 mb-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eligendi nesciunt repellendus! Officiis unde architecto excepturi quisquam, ut dignissimos quasi, debitis modi, commodi doloribus alias odio? Eaque saepe quasi similique?
-                        </div>
-                    </div> */}
                 </div>
 
 
@@ -155,7 +189,13 @@ const MainLayout = () => {
 
                 <div className='w-full md:w-3/12'>
                     <div className="w-full pt-24 pb-12 sticky -z-10 top-0">
-                        <div className="bg-white rounded-lg overflow-hidden border border-gray-300 shadow-md">
+                        <AdSense.Google
+                            client='pub-8612459690712276'
+                            slot='1234567890'
+                            style={{ width: 300, height: 250, float: 'left' }}
+                            format=''
+                        />
+                        {/* <div className="bg-white rounded-lg overflow-hidden border border-gray-300 shadow-md">
                             <img
                                 src="https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png"
                                 alt="image"
@@ -180,7 +220,7 @@ const MainLayout = () => {
                                     View Ad
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
