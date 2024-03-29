@@ -36,7 +36,7 @@ const Blogs = () => {
                                     </h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                                         {subcategory.posts.map((post, index3) => (
-                                            <div key={index3} className="bg-white rounded-lg overflow-hidden hover:shadow-lg">
+                                            <div key={index3} className="bg-white rounded-lg overflow-hidden hover:shadow-2xl">
                                                 <img
                                                     src="assets/images/placeholder.jpeg"
                                                     alt="image"
