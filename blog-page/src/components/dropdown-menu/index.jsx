@@ -91,9 +91,10 @@ const DropDownMenu = () => {
                                         //     setIsOpen(true)
                                         // }}
                                         href="#"
-                                        className="px-4 py-2 flex text-gray-800 hover:bg-gray-200"
+                                        className="px-4 py-2 flex w-full justify-between text-gray-800 hover:bg-gray-200"
                                     >
-                                        {e} <i class="fa-solid fa-chevron-up fa-rotate-90"></i>
+                                        <p>{e}</p>
+                                        <i class="fa-solid fa-chevron-up fa-rotate-90"></i>
                                     </a>
                                 ))}
                             </div>
