@@ -24,7 +24,7 @@ const DropDownMenu = () => {
                 onMouseLeave={() => {
                     setIsOpen(false);
                 }}
-                className="relative">
+                className="relative z-10">
                 <button
                     className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                     onMouseEnter={() => {
@@ -60,7 +60,7 @@ const DropDownMenu = () => {
                                             setSubMenu(e.items)
                                             setIsSubMenuOpen(true)
                                         }}
-                                        href="#"
+                                        href={`#${e.name}`}
                                         className="px-4 py-2 flex w-full justify-between text-gray-800 hover:bg-gray-200"
                                     >
                                         <p>{e.name}</p>
@@ -84,13 +84,13 @@ const DropDownMenu = () => {
                             <div className='py-1'>
                                 {subMenu.map((e, i) => (
                                     <a
-                                        // onMouseEnter={() => }
                                         key={i}
+                                        // onMouseEnter={() => }
                                         // onMouseEnter={() => {
                                         //     setSubMenu({ data: e.items, index: i })
                                         //     setIsOpen(true)
                                         // }}
-                                        href="#"
+                                        href={`#${e}`}
                                         className="px-4 py-2 flex w-full justify-between text-gray-800 hover:bg-gray-200"
                                     >
                                         <p>{e}</p>

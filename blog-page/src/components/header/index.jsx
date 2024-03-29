@@ -1,14 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const links = ["Home", "About Us", "Blogs", "Contact Us"];
 
-export default function Header() {
+function Header() {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    const [scrolling, setScrolling] = useState(0);
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolling = window.scrollY > 25;
+            setScrolling(isScrolling);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <>
-            <div className="bg-gray-900 sticky top-0 px-[5vw]">
+            <div className={`${scrolling ? "bg-gray-900/90" : "bg-gray-900"}  sticky z-20 top-0 px-[5vw]`}>
                 <header className=" w-[90vw] top-0 mx-auto flex items-center justify-between shrink-0">
                     <div className="flex items-center">
                         <div className="w-20 block">
@@ -56,3 +67,4 @@ export default function Header() {
     )
 }
 
+export default Header;
