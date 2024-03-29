@@ -42,7 +42,7 @@ const DropDownMenu = () => {
                                     onMouseLeave={() => {
                                         setData({ data: [], isOpen: false, index: -1 })
                                     }}
-                                    className="absolute left-0 top-full w-36 sm:w-48 bg-white rounded-md shadow-lg z-10">
+                                    className="absolute left-0 top-full w-full bg-white rounded-md shadow-lg z-10">
                                     <div className='py-1'>
                                         {data.data.map((e, i) => (
                                             <a key={i}
