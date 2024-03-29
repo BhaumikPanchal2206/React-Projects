@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Header from '../header'
 import Footer from '../footer'
+import DropDownMenu from '../dropdown-menu'
 
-let data = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo fugiat facilis illum quis accusantium quaerat, repellat dolore eius nesciunt numquam dignissimos asperiores possimus. Aperiam maiores repellat dolores natus saepe nam illo, architecto assumenda ipsa laborum debitis maxime rerum voluptatibus, iusto doloremque inventore sequi distinctio. Qui, doloremque aliquid! Temporibus necessitatibus pariatur alias atque. Blanditiis minus, quasi aspernatur ea nam obcaecati facilis facere ipsa nulla eaque explicabo? Pariatur maxime architecto vitae qui accusamus impedit necessitatibus nulla, modi recusandae porro consectetur at quo enim doloribus debitis vero illum repellat, dolorum unde fugit, vel veniam! Enim quis sint ipsum ea dignissimos ullam! Atque porro, consequuntur asperiores aliquid rerum neque mollitia! Sapiente voluptatibus itaque, ea hic aspernatur excepturi quaerat officia eligendi? Maiores doloremque eos quaerat saepe enim asperiores ea, distinctio iusto ipsam impedit. Sint, placeat expedita hic illum magnam nobis unde repudiandae voluptate tenetur facilis nihil, voluptatem quibusdam ad minus consectetur earum ipsam provident quis reprehenderit quia officiis pariatur. Iure quis illum cumque odio numquam tempore adipisci harum, accusamus, laboriosam magnam ut aperiam non ducimus aut omnis fugit eaque cupiditate deserunt voluptatem asperiores nostrum expedita pariatur dignissimos. Cum dolor, placeat nobis labore deleniti eos sapiente optio? Neque nihil molestias vitae ea non nisi quam aliquid et eveniet nesciunt vero cum soluta, debitis quasi omnis laborum a eius exercitationem accusantium modi fugit libero voluptatibus, ut expedita? Eaque, accusantium praesentium alias ab reiciendis suscipit quos nulla omnis neque in, animi aut eos atque esse eius iusto optio quaerat doloribus nisi voluptas voluptates, iure facere veritatis! Officia, explicabo!"
+const data = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo fugiat facilis illum quis accusantium quaerat, repellat dolore eius nesciunt numquam dignissimos asperiores possimus. Aperiam maiores repellat dolores natus saepe nam illo, architecto assumenda ipsa laborum debitis maxime rerum voluptatibus, iusto doloremque inventore sequi distinctio. Qui, doloremque aliquid! Temporibus necessitatibus pariatur alias atque. Blanditiis minus, quasi aspernatur ea nam obcaecati facilis facere ipsa nulla eaque explicabo? Pariatur maxime architecto vitae qui accusamus impedit necessitatibus nulla, modi recusandae porro consectetur at quo enim doloribus debitis vero illum repellat, dolorum unde fugit, vel veniam! Enim quis sint ipsum ea dignissimos ullam! Atque porro, consequuntur asperiores aliquid rerum neque mollitia! Sapiente voluptatibus itaque, ea hic aspernatur excepturi quaerat officia eligendi? Maiores doloremque eos quaerat saepe enim asperiores ea, distinctio iusto ipsam impedit. Sint, placeat expedita hic illum magnam nobis unde repudiandae voluptate tenetur facilis nihil, voluptatem quibusdam ad minus consectetur earum ipsam provident quis reprehenderit quia officiis pariatur. Iure quis illum cumque odio numquam tempore adipisci harum, accusamus, laboriosam magnam ut aperiam non ducimus aut omnis fugit eaque cupiditate deserunt voluptatem asperiores nostrum expedita pariatur dignissimos. Cum dolor, placeat nobis labore deleniti eos sapiente optio? Neque nihil molestias vitae ea non nisi quam aliquid et eveniet nesciunt vero cum soluta, debitis quasi omnis laborum a eius exercitationem accusantium modi fugit libero voluptatibus, ut expedita? Eaque, accusantium praesentium alias ab reiciendis suscipit quos nulla omnis neque in, animi aut eos atque esse eius iusto optio quaerat doloribus nisi voluptas voluptates, iure facere veritatis! Officia, explicabo!"
+
 
 const MainLayout = () => {
     const [showMore, setShowMore] = useState(false)
@@ -10,6 +12,8 @@ const MainLayout = () => {
     return (
         <>
             <Header />
+            <div className='pt-[80px]'></div>
+
             {/* <div> */}
             <div className='w-[90vw] pt-[85px] mx-auto block md:flex gap-5'>
                 <div className='w-full md:w-9/12'>
@@ -39,6 +43,9 @@ const MainLayout = () => {
                             </div> */}
                         {/* </div> */}
                     </div>
+
+                    <DropDownMenu />
+
                     <div className="py-8 md:py-10 lg:py-14 xl:py-16">
                         <div className="container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                             <div className="space-y-2">
