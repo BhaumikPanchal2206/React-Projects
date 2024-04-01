@@ -54,24 +54,25 @@ function Header({ isDark, setIsDark }) {
                                 localStorage.setItem("theme", isDark ? "light" : "dark")
                             }}
                             aria-hidden="true"
-                            className="ms-3 group p-2 transition-colors duration-200 rounded-full shadow-md bg-blue-200 hover:bg-blue-200 dark:bg-gray-50 dark:hover:bg-gray-200 text-gray-900 focus:outline-none"
+                            className={`${isDark ? "bg-white" : "bg-gray-800"} h-10 w-10 ms-3 group p-2 transition-colors duration-200 rounded-full shadow-md text-gray-900 focus:outline-none flex justify-center items-center`}
                         >
-                            {isDark ? <SVG src='/assets/icons/star.svg' /> : <SVG src='/assets/icons/night.svg' />}
+                            {/* {isDark ? <SVG src='/assets/icons/star.svg' /> : <SVG src='/assets/icons/night.svg' />} */}
+                            <i class={`fa-solid fa-circle-half-stroke ${isDark ? "text-black" : "text-white"}`}></i>
                         </button>
                         {/* </li> */}
                     </div>
 
                     <div className="block md:hidden">
                         <div onClick={() => setIsNavbarOpen(pre => !pre)} className="cursor-pointer ">
-                            <i className={`${!isNavbarOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark"}  text-white text-xl`}></i>
+                            <i className={`${!isNavbarOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark"}  ${isDark ? "text-white" : "text-black"} text-xl`}></i>
                         </div>
                     </div>
                 </header>
                 {isNavbarOpen && (
-                    <div className={`md:hidden bg-gray-900 duration-300 `}>
+                    <div className={`md:hidden ${isDark ? "bg-gray-900" : "bg-gray-100"} duration-300 `}>
                         <div className="flex flex-col items-center">
                             {links.map((ele, index) => (
-                                <a onClick={() => setIsNavbarOpen(pre => !pre)} key={index} className="text-gray-100 my-2" href="#">
+                                <a onClick={() => setIsNavbarOpen(pre => !pre)} key={index} className={`${isDark ? "text-gray-100" : "text-gray-900"} my-2`} href="#">
                                     {ele}
                                 </a>
                             ))}
