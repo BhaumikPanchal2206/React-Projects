@@ -21,7 +21,7 @@ function Header({ isDark, setIsDark }) {
 
     return (
         <>
-            <div className={`${scrolling ? "bg-gray-900/90" : "bg-gray-900"}  sticky z-20 top-0 px-[5vw]`}>
+            <div className={` ${isDark ? `${scrolling ? "bg-gray-900/90" : "bg-gray-900"}` : `${scrolling ? "bg-gray-100/90" : "bg-white"}`}  sticky z-30 top-0 px-[5vw]`}>
                 <header className=" w-[90vw] top-0 mx-auto flex items-center justify-between shrink-0">
                     <div className="flex items-center">
                         <div className="w-20 block">
@@ -34,7 +34,7 @@ function Header({ isDark, setIsDark }) {
                             </Link>
                         </div>
                         <nav className="">
-                            <Link className="text-white text-2xl font-semibold" href="#">
+                            <Link className={`${isDark ? "text-white" : "text-black"} text-2xl font-semibold`}>
                                 TechTonic
                             </Link>
                         </nav>
@@ -42,8 +42,8 @@ function Header({ isDark, setIsDark }) {
                     <div className="flex items-center">
                         <ul className="hidden space-x-2 md:flex md:space-x-8">
                             {links.map((ele, index) => (
-                                <li key={index} className="text-gray-100" href="#">
-                                    {ele}
+                                <li key={index} className={`${isDark ? "text-gray-100" : "text-gray-800"}`} >
+                                    <a href="#">{ele}</a>
                                 </li>
                             ))}
                         </ul>
@@ -63,7 +63,7 @@ function Header({ isDark, setIsDark }) {
 
                     <div className="block md:hidden">
                         <div onClick={() => setIsNavbarOpen(pre => !pre)} className="cursor-pointer ">
-                            <i class={`${!isNavbarOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark"}  text-white text-xl`}></i>
+                            <i className={`${!isNavbarOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark"}  text-white text-xl`}></i>
                         </div>
                     </div>
                 </header>

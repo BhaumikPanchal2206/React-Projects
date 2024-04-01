@@ -42,23 +42,23 @@ const blogData = [
     }
 ];
 
-const Blogs = () => {
+const Blogs = ({ isDark }) => {
     const [show, setShow] = useState(false);
     const [detailsData, setDetailsData] = useState({});
 
     return (
         <>
-            <section id='blogs' className="pb-10 lg:pb-20 bg-white">
+            <section id='blogs' className={`${isDark ? "bg-gray-800" : "bg-white"} pb-10 lg:pb-20 `}>
                 <div className="container mx-auto px-4">
                     {blogData.map((gadget, index1) => (
                         <div key={index1} className="mb-12">
-                            <h2 id={gadget.category} className="text-3xl lg:text-4xl border-b-4 border-black font-bold pb-2 pt-10 ">
-                                <p className='inline-block hover:scale-x-125 duration-300'>{gadget.category}</p>
+                            <h2 id={gadget.category} className={`text-3xl lg:text-4xl border-b-4 ${isDark ? "border-gray-200" : "border-gray-800"} font-bold pb-2 pt-10`}>
+                                <p className={`${isDark ? "text-white" : "text-black"} inline-block hover:scale-x-125 duration-300`}>{gadget.category}</p>
                             </h2>
                             {gadget.subcategories.map((subcategory, index2) => (
                                 <div id={subcategory.name} key={index2} className="pt-6">
                                     <h2 className="text-xl lg:text-2xl font-semibold py-3">
-                                        <p className='inline-block hover:scale-y-125 duration-300'>{subcategory.name}</p>
+                                        <p className={`inline-block hover:scale-y-125 duration-300 ${isDark ? "text-gray-100" : "text-gray-800"}`}>{subcategory.name}</p>
                                     </h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-1">
                                         {subcategory.posts.map((post, index3) => (
@@ -68,17 +68,15 @@ const Blogs = () => {
                                                     setDetailsData(post)
                                                 }}
                                                 key={index3}
-                                                className="cursor-pointer relative border-2 border-gray-700 bg-white rounded-sm overflow-hidden hover:shadow-2xl">
+                                                className={`cursor-pointer relative border-2 border-gray-700 ${isDark ? "bg-gray-800" : "bg-white"} rounded-sm overflow-hidden hover:shadow-2xl`}>
                                                 <img
                                                     src={post.img}
                                                     alt="image"
-                                                    className="w-full h-60 object-contain border-b-2 pb-4"
+                                                    className="w-full h-60 object-contain"
                                                 />
                                                 <div className='absolute w-full bottom-0 text-center bg-gray-400/25'>
                                                     <h3 className="text-lg lg:text-xl font-semibold mb-4">
-                                                        <h2
-                                                            className="text-dark hover:text-primary transition duration-300"
-                                                        >
+                                                        <h2 className="text-dark hover:text-primary hover:scale-125 duration-300 transition">
                                                             {post.title}
                                                         </h2>
                                                     </h3>
@@ -113,7 +111,7 @@ const Blogs = () => {
                     ))}
                 </div>
             </section>
-            {show && <DescriptionPopUp setShow={setShow} data={detailsData} />}
+            {show && <DescriptionPopUp setShow={setShow} data={detailsData} isDark={isDark} />}
         </>
     )
 }

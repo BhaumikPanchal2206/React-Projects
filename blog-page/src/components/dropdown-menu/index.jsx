@@ -25,7 +25,7 @@ const DropDownMenu = ({ isDark }) => {
                 {category.map((ele, index) => (
                     <button
                         key={index}
-                        className={`relative bg-${isDark ? "gray-700" : "gray-300"} ${isDark ? "text-gray-200" : "text-gray-700"} font-semibold py-2 px-4 rounded inline-flex items-center`}
+                        className={`relative ${isDark ? "bg-gray-700" : "bg-gray-300"} ${isDark ? "text-gray-200" : "text-gray-700"} font-semibold py-2 px-4 rounded inline-flex items-center`}
                         onMouseMove={() => {
                             setData({ data: ele.items, isOpen: true, index: index });
                         }}
@@ -36,14 +36,14 @@ const DropDownMenu = ({ isDark }) => {
                                 onMouseLeave={() => {
                                     setData({ data: [], isOpen: false, index: -1 });
                                 }}
-                                className={`absolute left-0 top-full w-full bg-${isDark ? "gray-800" : "white"} rounded-md shadow-lg z-10`}
+                                className={`absolute left-0 top-full w-full ${isDark ? "bg-gray-800" : "bg-white"} rounded-md shadow-lg z-10`}
                             >
                                 <div className='py-1'>
                                     {data.data.map((e, i) => (
                                         <a
                                             key={i}
                                             href={`#${e}`}
-                                            className={`px-4 py-2 flex w-full justify-between ${isDark ? "text-gray-200" : "text-gray-800"} hover:bg-${isDark ? "gray-600" : "gray-200"}`}
+                                            className={`px-4 py-2 flex w-full justify-between ${isDark ? "text-gray-200" : "text-gray-800"} ${isDark ? "hover:bg-gray-600" : "hover:bg-gray-200"}`}
                                         >
                                             <p>{e}</p>
                                             <i className="fa-solid fa-chevron-up fa-rotate-90"></i>

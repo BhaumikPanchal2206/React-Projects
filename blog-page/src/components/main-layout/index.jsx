@@ -49,9 +49,9 @@ const MainLayout = () => {
                                 </div>
                             </div>
 
-                            <DropDownMenu />
+                            <DropDownMenu isDark={isDark} />
 
-                            <Blogs />
+                            <Blogs isDark={isDark} />
 
                         </div>
 
@@ -63,7 +63,7 @@ const MainLayout = () => {
                             <p className='cursor-pointer text-blue-700' onClick={() => setShowMore(pre => !pre)}>view more...</p>
                         </div> */}
 
-                        <div className="border-t border-gray-200 dark:border-gray-800">
+                        <div className={`border-t ${isDark ? "border-gray-400" : "border-gray-600"}`}>
                             <div className="container py-8 md:py-12 lg:py-16 grid items-center justify-center gap-4 text-center md:px-6 lg:gap-10">
                                 <div className="space-y-2">
                                     <h2 className={`${isDark ? "text-white" : "text-gray-900"} text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter`}>
@@ -79,6 +79,12 @@ const MainLayout = () => {
 
                     <div className='w-full md:w-3/12'>
                         <div className="w-full pt-24 pb-12 sticky -z-10 top-0">
+                            {/* <AdSense.Google
+                            client='pub-8612459690712276'
+                            slot='1234567890'
+                            style={{ width: 300, height: 250, float: 'left' }}
+                            format=''
+                        /> */}
                             <div className="bg-white rounded-lg overflow-hidden border border-gray-300 shadow-md">
                                 <img
                                     src="https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png"
