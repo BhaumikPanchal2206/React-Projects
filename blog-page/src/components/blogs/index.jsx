@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DescriptionPopUp from '../shared/pop-up';
 
 
 const blogData = [
@@ -42,6 +43,9 @@ const blogData = [
 ];
 
 const Blogs = () => {
+    const [show, setShow] = useState(false);
+    const [detailsData, setDetailsData] = useState({});
+
     return (
         <>
             <section id='blogs' className="pb-10 lg:pb-20 bg-white">
@@ -56,15 +60,30 @@ const Blogs = () => {
                                     <h2 className="text-xl lg:text-2xl font-semibold py-3">
                                         <p className='inline-block hover:scale-y-125 duration-300'>{subcategory.name}</p>
                                     </h2>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-1">
                                         {subcategory.posts.map((post, index3) => (
-                                            <div key={index3} className="border-2 bg-white rounded-lg overflow-hidden hover:shadow-2xl">
+                                            <div
+                                                onClick={() => {
+                                                    setShow(true)
+                                                    setDetailsData(post)
+                                                }}
+                                                key={index3}
+                                                className="cursor-pointer relative border-2 border-gray-700 bg-white rounded-sm overflow-hidden hover:shadow-2xl">
                                                 <img
                                                     src={post.img}
                                                     alt="image"
                                                     className="w-full h-60 object-contain border-b-2 pb-4"
                                                 />
-                                                <div className="p-6 lg:p-8 text-center">
+                                                <div className='absolute w-full bottom-0 text-center bg-gray-400/25'>
+                                                    <h3 className="text-lg lg:text-xl font-semibold mb-4">
+                                                        <h2
+                                                            className="text-dark hover:text-primary transition duration-300"
+                                                        >
+                                                            {post.title}
+                                                        </h2>
+                                                    </h3>
+                                                </div>
+                                                {/* <div className="p-6 lg:p-8 text-center">
                                                     <h3 className="text-lg lg:text-xl font-semibold mb-4">
                                                         <h2
                                                             className="text-dark hover:text-primary transition duration-300"
@@ -75,13 +94,16 @@ const Blogs = () => {
                                                     <p className="text-sm lg:text-base text-body-color leading-relaxed mb-5">
                                                         {post.desc}
                                                     </p>
-                                                    <a
-                                                        href="javascript:void(0)"
+                                                    <button
+                                                        onClick={() => {
+                                                            setShow(true)
+                                                            setDetailsData(post)
+                                                        }}
                                                         className=" inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-blue-600 hover:bg-blue-600 hover:text-white duration-500 transition "
                                                     >
                                                         View Details
-                                                    </a>
-                                                </div>
+                                                    </button>
+                                                </div> */}
                                             </div>
                                         ))}
                                     </div>
@@ -91,6 +113,7 @@ const Blogs = () => {
                     ))}
                 </div>
             </section>
+            {show && <DescriptionPopUp setShow={setShow} data={detailsData} />}
         </>
     )
 }
