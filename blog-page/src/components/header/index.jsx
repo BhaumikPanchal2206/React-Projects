@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SVG from "react-inlinesvg"
 
 const links = ["Home", "About Us", "Blogs", "Contact Us"];
 
-function Header() {
+function Header({ isDark, setIsDark }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     const [scrolling, setScrolling] = useState(0);
+
     useEffect(() => {
         const handleScroll = () => {
             const isScrolling = window.scrollY > 25;
@@ -37,13 +39,27 @@ function Header() {
                             </Link>
                         </nav>
                     </div>
-                    <ul className="hidden space-x-2 md:flex md:space-x-8">
-                        {links.map((ele, index) => (
-                            <li key={index} className="text-gray-100" href="#">
-                                {ele}
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="flex items-center">
+                        <ul className="hidden space-x-2 md:flex md:space-x-8">
+                            {links.map((ele, index) => (
+                                <li key={index} className="text-gray-100" href="#">
+                                    {ele}
+                                </li>
+                            ))}
+                        </ul>
+                        {/* <li> */}
+                        <button
+                            onClick={() => {
+                                setIsDark((pre) => !pre)
+                                localStorage.setItem("theme", isDark ? "light" : "dark")
+                            }}
+                            aria-hidden="true"
+                            className="ms-3 group p-2 transition-colors duration-200 rounded-full shadow-md bg-blue-200 hover:bg-blue-200 dark:bg-gray-50 dark:hover:bg-gray-200 text-gray-900 focus:outline-none"
+                        >
+                            {isDark ? <SVG src='/assets/icons/star.svg' /> : <SVG src='/assets/icons/night.svg' />}
+                        </button>
+                        {/* </li> */}
+                    </div>
 
                     <div className="block md:hidden">
                         <div onClick={() => setIsNavbarOpen(pre => !pre)} className="cursor-pointer ">
