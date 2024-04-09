@@ -11,8 +11,8 @@ function App() {
       <ToastContainer pauseOnHover={false} autoClose={1000} position="top-left" />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LogIn />} />
-          <Route path="/admin" element={<MainLayout />} />
+          <Route path="/log-in" element={<LogIn />} />
+          <Route path="/" element={<MainLayout />} />
         </Routes>
       </BrowserRouter>
     </>
