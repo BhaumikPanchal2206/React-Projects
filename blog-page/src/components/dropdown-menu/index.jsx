@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Mobile
 // Laptop 
@@ -40,6 +40,20 @@ const category = [
 
 const DropDownMenu = ({ isDark }) => {
     const [data, setData] = useState({ data: [], isOpen: false, index: -1 });
+    const [category, setCategory] = useState([])
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true)
+        let a = fetch("https://tech-tonics.onrender.com/product")
+            .then(e => e.json())
+            .then(data => {
+                let a = Object.keys(data.data).map(e => ({ name: e, items: Object.keys(data.data[e]).map(a => a) }))
+                setCategory(a)
+            })
+            .finally(() => setLoading(false))
+    }, [])
+
 
     return (
         <div
