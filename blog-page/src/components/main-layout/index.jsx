@@ -2,15 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Header from '../header';
 import Footer from '../footer';
 import DropDownMenu from '../dropdown-menu';
-import AdSense from 'react-adsense';
+// import AdSense from 'react-adsense';
 import Blogs from '../blogs';
-
-const data =
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo fugiat facilis illum quis accusantium quaerat, repellat dolore eius nesciunt numquam dignissimos asperiores possimus. Aperiam maiores repellat dolores natus saepe nam illo, architecto assumenda ipsa laborum debitis maxime rerum voluptatibus, iusto doloremque inventore sequi distinctio. Qui, doloremque aliquid! Temporibus necessitatibus pariatur alias atque. Blanditiis minus, quasi aspernatur ea nam obcaecati facilis facere ipsa nulla eaque explicabo? Pariatur maxime architecto vitae qui accusamus impedit necessitatibus nulla, modi recusandae porro consectetur at quo enim doloribus debitis vero illum repellat, dolorum unde fugit, vel veniam! Enim quis sint ipsum ea dignissimos ullam! Atque porro, consequuntur asperiores aliquid rerum neque mollitia! Sapiente voluptatibus itaque, ea hic aspernatur excepturi quaerat officia eligendi? Maiores doloremque eos quaerat saepe enim asperiores ea, distinctio iusto ipsam impedit. Sint, placeat expedita hic illum magnam nobis unde repudiandae voluptate tenetur facilis nihil, voluptatem quibusdam ad minus consectetur earum ipsam provident quis reprehenderit quia officiis pariatur. Iure quis illum cumque odio numquam tempore adipisci harum, accusamus, laboriosam magnam ut aperiam non ducimus aut omnis fugit eaque cupiditate deserunt voluptatem asperiores nostrum expedita pariatur dignissimos. Cum dolor, placeat nobis labore deleniti eos sapiente optio? Neque nihil molestias vitae ea non nisi quam aliquid et eveniet nesciunt vero cum soluta, debitis quasi omnis laborum a eius exercitationem accusantium modi fugit libero voluptatibus, ut expedita? Eaque, accusantium praesentium alias ab reiciendis suscipit quos nulla omnis neque in, animi aut eos atque esse eius iusto optio quaerat doloribus nisi voluptas voluptates, iure facere veritatis! Officia, explicabo!";
 
 
 const MainLayout = () => {
-    const [showMore, setShowMore] = useState(false);
     const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
@@ -22,7 +18,7 @@ const MainLayout = () => {
         <>
             <Header isDark={isDark} setIsDark={setIsDark} />
 
-            <div className={`${isDark ? "bg-gray-800" : "bg-white"} ${isDark ? "vwhite" : "text-black"} ${isDark ? "dark" : "light"}-mode`}>
+            <div className={`${isDark ? "bg-gray-800" : "bg-white"} ${isDark ? "text-white" : "text-black"} ${isDark ? "dark" : "light"}-mode pt-[80px]`}>
                 <div className='w-[90vw] mx-auto block md:flex gap-5'>
                     <div className='w-full md:w-9/12'>
                         <div className={`${isDark ? "bg-gray-800" : "bg-gray-50"} py-8 md:py-12 lg:py-16 xl:py-20`}>
@@ -54,14 +50,6 @@ const MainLayout = () => {
                             <Blogs isDark={isDark} />
 
                         </div>
-
-                        {/* <div className={`${isDark ? "bg-gray-800" : "bg-gray-200"} rounded-md p-6 ${isDark ? "dark" : "light"}-mode`}>
-                            <h2 className='text-2xl font-semibold pb-3'>Gadget Online</h2>
-                            <p>
-                                {!showMore ? data.slice(0, 200) : data}
-                            </p>
-                            <p className='cursor-pointer text-blue-700' onClick={() => setShowMore(pre => !pre)}>view more...</p>
-                        </div> */}
 
                         <div className={`border-t ${isDark ? "border-gray-400" : "border-gray-600"}`}>
                             <div className="container py-8 md:py-12 lg:py-16 grid items-center justify-center gap-4 text-center md:px-6 lg:gap-10">

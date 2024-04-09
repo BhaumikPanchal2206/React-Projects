@@ -8,10 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Register /> */}
-        {/* <Route path="/" element={<MainPage />} /> */}
         <Route path="/" element={<MainLayout />} />
-
       </Routes>
     </BrowserRouter>
   );

@@ -18,7 +18,7 @@ const DescriptionPopUp = ({ setShow, data, isDark }) => {
                                     className="h-60 object-contain"
                                 />
                                 <div>
-                                    <h1 className={`font-semibold text-4xl ${isDark ? "text-white" : "text-black"}`}>{data.name}</h1>
+                                    <h1 className={`font-semibold text-4xl ${isDark ? "text-white" : "text-black"}`}>{data.title}</h1>
                                 </div>
                             </div>
                             <div className="">
@@ -29,24 +29,30 @@ const DescriptionPopUp = ({ setShow, data, isDark }) => {
                                     </>
                                 )}
                                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 p-3'>
-                                    {data.features.map((feature, index) => (
-                                        <div key={index}>
-                                            <p className={`text-red-600 inline-block hover:scale-x-105 duration-200 font-bold text-xl pt-5 py-3`}>
-                                                {feature.title}
-                                            </p>
-                                            {Object.keys(feature.features_desc).map((e, i) => (
-                                                <div key={index} className="flex">
-                                                    <div className='w-1/3'>{e}</div>
-                                                    <div className=''>
-                                                        <span className='pr-5'>:</span>
-                                                        {feature.features_desc[e]}</div>
-                                                </div>
-                                            ))}
+                                    {data.unboxing && (
+                                        <div>
+                                            <p className={`text-red-600 inline-block hover:scale-x-105 duration-200 font-bold text-xl pt-5 py-3`}>Unboxing</p>
                                             <p className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>{data.unboxing}</p>
                                         </div>
-                                    ))}
-                                    {/* {data.unboxing && (
-                                    )} */}
+                                    )}
+                                    {data.unboxing && (
+                                        <div>
+                                            <p className={`text-red-600 inline-block hover:scale-x-105 duration-200 font-bold text-xl pt-5 py-3`}>Unboxing</p>
+                                            <p className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>{data.unboxing}</p>
+                                        </div>
+                                    )}
+                                    {data.unboxing && (
+                                        <div>
+                                            <p className={`text-red-600 inline-block hover:scale-x-105 duration-200 font-bold text-xl pt-5 py-3`}>Unboxing</p>
+                                            <p className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>{data.unboxing}</p>
+                                        </div>
+                                    )}
+                                    {data.unboxing && (
+                                        <div>
+                                            <p className={`text-red-600 inline-block hover:scale-x-105 duration-200 font-bold text-xl pt-5 py-3`}>Unboxing</p>
+                                            <p className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>{data.unboxing}</p>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>

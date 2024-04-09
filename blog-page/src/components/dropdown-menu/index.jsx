@@ -1,13 +1,40 @@
 import React, { useState } from 'react';
 
+// Mobile
+// Laptop 
+// Tablet
+// Dslr
+// Smart watches
+// Headphones
+// Earbuds
 const category = [
     {
         name: "Mobile",
         items: ["Samsung", "iPhone"]
     },
     {
-        name: "Headphone",
+        name: "Laptop",
+        items: ["HP", "Dell", "Asus"]
+    },
+    {
+        name: "Tablet",
+        items: ["Samsung"]
+    },
+    {
+        name: "Dslr",
+        items: ["Canon"]
+    },
+    {
+        name: "Smart watches",
+        items: ["Noise", "Apple", "Samsung"]
+    },
+    {
+        name: "Headphones",
         items: ["Boat", "U & I"]
+    },
+    {
+        name: "Earbuds",
+        items: ["Boat", "Bose"]
     },
 ];
 
@@ -42,7 +69,8 @@ const DropDownMenu = ({ isDark }) => {
                                     {data.data.map((e, i) => (
                                         <a
                                             key={i}
-                                            href={`#${e}`}
+                                            href={`#${e.toLowerCase()}`}
+                                            onClick={() => setData({ data: [], isOpen: false, index: -1 })}
                                             className={`px-4 py-2 flex w-full justify-between ${isDark ? "text-gray-200" : "text-gray-800"} ${isDark ? "hover:bg-gray-600" : "hover:bg-gray-200"}`}
                                         >
                                             <p>{e}</p>
