@@ -2,6 +2,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #1F2937;
+}
+
 
 @keyframes modalOverlayAnimation {
     from {

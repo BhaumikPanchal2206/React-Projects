@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SVG from "react-inlinesvg"
 
-const links = ["Home", "Blogs"];
+const links = [{ name: "Home", href: "#" }, { name: "Blogs", href: "#blogs" }];
 
 function Header({ isDark, setIsDark, search, setSearch }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -58,7 +58,7 @@ function Header({ isDark, setIsDark, search, setSearch }) {
                             <ul className="hidden space-x-2 md:flex md:space-x-8">
                                 {links.map((ele, index) => (
                                     <li key={index} className={`${isDark ? "text-gray-100" : "text-gray-800"}`} >
-                                        <a href="#">{ele}</a>
+                                        <a href={ele.href}>{ele.name}</a>
                                     </li>
                                 ))}
                             </ul>
