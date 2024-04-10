@@ -38,6 +38,7 @@ const DescriptionPopUp = ({ setShow, data, isDark }) => {
                                                 {feature.title}
                                             </p>
                                             {feature.features_desc && Object.keys(feature.features_desc).map((e, i) => (
+                                                e !== "" &&
                                                 <div key={index} className="flex">
                                                     <div className='w-1/3'>{e}</div>
                                                     <div className=''>
