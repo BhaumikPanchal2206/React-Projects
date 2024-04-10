@@ -87,7 +87,7 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
                             </div>
                         ) : (
                             <>
-                                {Object.keys(productData).map((gadget, index1) => (
+                                {productData && Object.keys(productData).map((gadget, index1) => (
                                     <div key={index1} className="mb-12">
                                         <h2 id={gadget.toLowerCase()} className={`text-3xl lg:text-4xl border-b-4 ${isDark ? "border-gray-200" : "border-gray-800"} font-bold pb-2 pt-10`}>
                                             <p className={`${isDark ? "text-white" : "text-black"} inline-block hover:scale-x-125 duration-300`}>{gadget}</p>
