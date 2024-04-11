@@ -93,7 +93,7 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
                                             <p className={`${isDark ? "text-white" : "text-black"} inline-block hover:scale-x-125 duration-300`}>{gadget}</p>
                                         </h2>
                                         {Object.keys(productData[gadget]).map((subcategory, index2) => (
-                                            <div id={subcategory.toLowerCase()} key={index2} className="pt-6">
+                                            <div id={(gadget + subcategory).toLowerCase()} key={index2} className="pt-6">
                                                 <h2 className="text-xl lg:text-2xl font-semibold py-3">
                                                     <p className={`inline-block hover:scale-y-125 duration-300 ${isDark ? "text-gray-100" : "text-gray-800"}`}>{subcategory}</p>
                                                 </h2>
