@@ -75,11 +75,11 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
                                                 className="w-full h-60 object-contain"
                                             />
                                             <div className='absolute w-full bottom-0 text-center bg-gray-400/25'>
-                                                <h3 className="text-lg lg:text-xl font-semibold mb-4">
+                                                <div className="text-lg lg:text-xl font-semibold mb-4">
                                                     <h2 className="text-black hover:text-primary hover:scale-125 duration-300 transition">
                                                         {post.name}
                                                     </h2>
-                                                </h3>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -116,11 +116,11 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
                                                                 className="w-full h-60 object-contain"
                                                             />
                                                             <div className='absolute w-full bottom-0 text-center bg-gray-400/25'>
-                                                                <h3 className="text-lg lg:text-xl font-semibold mb-4">
+                                                                <div className="text-lg lg:text-xl font-semibold mb-4">
                                                                     <h2 className="text-dark hover:text-primary hover:scale-125 duration-300 transition">
                                                                         {post.name}
                                                                     </h2>
-                                                                </h3>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     ))}

@@ -118,7 +118,7 @@ const MainLayout = () => {
                             style={{ width: 300, height: 250, float: 'left' }}
                             format=''
                             /> */}
-                            
+
                             {/* <div className="bg-white rounded-lg overflow-hidden border border-gray-300 shadow-md">
                                 <img
                                     src="https://static.vecteezy.com/system/resources/previews/022/721/557/original/google-logo-for-search-site-free-png.png"
@@ -146,7 +146,7 @@ const MainLayout = () => {
                                 </div>
                             </div> */}
 
-                            <AdsComponent dataAdSlot='X7XXXXXX5X' />
+                            {/* <AdsComponent dataAdSlot='X7XXXXXX5X' /> */}
 
                         </div>
                     </div>
