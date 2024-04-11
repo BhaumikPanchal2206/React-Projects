@@ -29,7 +29,7 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
         <>
             <section id='blogs' className={`${isDark ? "bg-gray-800" : "bg-white"} py-10 lg:pb-20 `}>
                 {loading ? (
-                    <div className='w-[90vw] mx-auto flex justify-center'>
+                    <div className='container mx-auto flex justify-center'>
                         <div
                             aria-label="Orange and tan hamster running in a metal wheel"
                             role="img"
@@ -54,7 +54,7 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
                         </div>
                     </div>
                 ) : (
-                    <div className="w-[90vw] mx-auto px-4">
+                    <div className="mx-auto px-4">
                         {search.trim() !== "" ? (
                             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-1">
                                 {searchProducts.map((post, index3) => (
