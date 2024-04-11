@@ -117,7 +117,7 @@ const Blogs = ({ isDark, productData, setProductData, searchProducts, search }) 
                                                             />
                                                             <div className='absolute w-full bottom-0 text-center bg-gray-400/25'>
                                                                 <div className="text-lg lg:text-xl font-semibold mb-4">
-                                                                    <h2 className="text-dark hover:text-primary hover:scale-125 duration-300 transition">
+                                                                    <h2 className="text-black hover:text-primary hover:scale-125 duration-300 transition">
                                                                         {post.name}
                                                                     </h2>
                                                                 </div>
