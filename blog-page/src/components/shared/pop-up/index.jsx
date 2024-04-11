@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const DescriptionPopUp = ({ setShow, data, isDark }) => {
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden"
+    }, [])
+
     return (
         <>
             <div className={`fixed back inset-0 flex items-center justify-center p-5 z-[99] overflow-hidden`}>
