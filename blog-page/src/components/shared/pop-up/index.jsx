@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const DescriptionPopUp = ({ setShow, data, isDark }) => {
 
     useEffect(() => {
-        document.body.style.overflow = "hidden"
+        // document.body.style.overflow = "hidden"
     }, [])
 
     return (
@@ -54,8 +54,6 @@ const DescriptionPopUp = ({ setShow, data, isDark }) => {
                                             <p className={`${isDark ? "text-gray-300" : "text-gray-700"}`}>{data.unboxing}</p>
                                         </div>
                                     ))}
-                                    {/* {data.unboxing && (
-                                    )} */}
                                 </div>
                             </div>
                         </div>
